@@ -83,4 +83,12 @@ class Metric():
                 num += 1
         return round(pop / num, 6)
 
-    def val 
+    def eval(self):
+        metric = {
+            'Precision': self.precision(),
+            'Recall': self.recall(),
+            'Coverage': self.coverage(),
+            'Popularity': self.popularity()
+        }
+        print('Metric:', metric)
+        return metric

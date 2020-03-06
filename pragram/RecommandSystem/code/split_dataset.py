@@ -16,6 +16,12 @@ class Dataset():
 
     @timmer
     def SplitData(self, M, k, seed = 1):
+        '''
+        :param M: 划分的数目，最后需要取M折的平均
+        :param k: 本次是第几次划分，k~[0, M)
+        :param seed: random的种子数，对于不同的k应设置成一样的
+        :return: train, test
+        '''
         test = []
         train = []
         random.seed(seed)
@@ -31,7 +37,7 @@ class Dataset():
             for user, item in data:
                 if user not in data_dict:
                     data_dict[user] = set()
-                data_dict.add(item)
+                data_dict[user].add(item)
             data_dict = {k: list(data_dict[k]) for k in data_dict}
             return data_dict
 

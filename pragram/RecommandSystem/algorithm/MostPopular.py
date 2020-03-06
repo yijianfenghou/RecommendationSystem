@@ -17,7 +17,7 @@ def MostPopular(train, K, N):
         #随机推荐N个没见过的最热门的
         user_items = set(train[user])
         rec_items = {k: items[k] for k in items if k not in user_items}
-        rec_items = list(sorted(rec_items/items(), key=lambda x:x[1], reverse=True))
+        rec_items = list(sorted(rec_items.items(), key=lambda x: x[1], reverse=True))
         return rec_items[:N]
 
     return GetRecommendation

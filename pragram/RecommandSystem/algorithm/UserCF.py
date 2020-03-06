@@ -37,7 +37,7 @@ def UserCF(train, K, N):
             sim[u][v] /= math.sqrt(num[u]*num[v])
 
     #按照相似度排序
-    sorted_user_sim = {k: list(sorted(v.items(), key=lambda x: x[1], reverse=True))}
+    sorted_user_sim = {k: list(sorted(v.items(), key=lambda x: x[1], reverse=True)) for k,v in sim.items()}
 
     #获取接口函数
     def GetRecommendation(user):

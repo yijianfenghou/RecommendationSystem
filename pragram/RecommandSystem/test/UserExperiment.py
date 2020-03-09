@@ -1,7 +1,7 @@
 # import sys
 # sys.path.append("..")
 from pragram.RecommandSystem.code import timmer, evaluation_standard, split_dataset
-from pragram.RecommandSystem.algorithm import MostPopular, Random, UserCF, UserIIF
+from pragram.RecommandSystem.chapter2 import MostPopular, Random, UserCF, UserIIF
 
 class UserExperiment():
 
@@ -49,6 +49,6 @@ class UserExperiment():
 if __name__ == "__main__":
     M, N = 8, 10
     K = 0
-    mp_exp = Experiment(M, K, N, rt='MostPopular')
+    mp_exp = UserExperiment(M, K, N, rt='MostPopular')
     mp_exp.run()
 

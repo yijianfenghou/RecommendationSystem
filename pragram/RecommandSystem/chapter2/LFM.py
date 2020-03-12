@@ -1,5 +1,5 @@
 import numpy as np
-
+from copy import copy
 
 def LFM(train, ratio, K, lr, step, lmda, N):
     '''
@@ -54,8 +54,9 @@ def LFM(train, ratio, K, lr, step, lmda, N):
         for user in data:
             for item in data[user]:
                 eui = data[user][item] - (P[user]*Q[user]).sum()
+                saveP = copy(P[user])
                 P[user] += lr * (Q[item]*eui - lmda*P[user])
-                Q[user] += lr * (P[user]*eui - lmda*Q[item])
+                Q[item] += lr * (saveP*eui - lmda*Q[item])
 
         lr *= 0.9
 

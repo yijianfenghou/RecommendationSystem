@@ -1,4 +1,4 @@
-from pragram.RecommandSystem.code import timmer, evaluation_standard, split_dataset
+from pragram.RecommandSystem.preprocessing_code import timmer, evaluation_standard, split_dataset
 from pragram.RecommandSystem.chapter2 import ItemCF, ItemIUF, ItemCFNorm
 
 class ItemExperiment():

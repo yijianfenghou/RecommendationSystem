@@ -1,4 +1,4 @@
-from pragram.RecommandSystem.chapter2.LFM import LFM
+from pragram.RecommandSystem.chapter2.LFM.LFM import LFM
 from pragram.RecommandSystem.preprocessing_code import timmer, evaluation_standard, split_dataset
 
 class LFMExperiment():

@@ -1,7 +1,8 @@
 # import sys
 # sys.path.append("..")
 from pragram.RecommandSystem.preprocessing_code import timmer, evaluation_standard, split_dataset
-from pragram.RecommandSystem.chapter2 import MostPopular, Random, UserCF, UserIIF
+from pragram.RecommandSystem.chapter2.user import MostPopular, Random, UserCF, UserIIF
+
 
 class UserExperiment():
 

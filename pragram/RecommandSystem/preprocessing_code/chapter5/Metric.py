@@ -13,7 +13,7 @@ class Metric():
         self.recs = self.getRec()
 
     # 为test中的每个用户进行推荐
-    def GetRec(self):
+    def getRec(self):
         recs = {}
         for user in self.test:
             rank = self.GetRecommendation(user)
@@ -45,7 +45,7 @@ class Metric():
 
     def eval(self):
         metric = {
-            'Precision': self.precision,
+            'Precision': self.precision(),
             'Recall': self.recall()
         }
         return metric

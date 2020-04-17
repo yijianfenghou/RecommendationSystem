@@ -42,6 +42,3 @@ class Dataset():
             return data_dict
 
         return convert_dict(train), convert_dict(test)
-
-
-

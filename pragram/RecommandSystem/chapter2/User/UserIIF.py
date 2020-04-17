@@ -31,7 +31,7 @@ def UserIIF(train, K, N):
                 if v not in sim[u]:
                     sim[u][v] = 0
                 # 相比UserCF，主要是改进了
-                num[u][v] += 1 / math.log(1+len(users))
+                sim[u][v] += 1 / math.log(1+len(users))
 
     for u in sim:
         for v in sim[u]:
